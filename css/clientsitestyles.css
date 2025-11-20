@@ -12,7 +12,7 @@ html {
 .container h1 {
   font-family: "source-code-variable", sans-serif;
 }
-.container img {
+.container:nth-of-type(3) img {
   width: 270px;
 }
 .container p {

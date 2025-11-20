@@ -23,8 +23,15 @@ html {
         font-family: "source-code-variable", sans-serif;
     }
 
-    img {
-        width: 270px;
+    // img {
+    //     width: 270px;
+    // }
+
+    // the pog juice is too big in the third container, so make the image smaller
+    &:nth-of-type(3) {
+        img {
+            width: 270px;
+        }
     }
 
     p {
