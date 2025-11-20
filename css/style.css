@@ -1,0 +1,230 @@
+body {
+    background-image: url(../assets/FlowFieldGenerativeArt.jpg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    /* padding: 0; */
+}
+
+a {
+    transition: 0.258s ease-in-out;
+} 
+
+header {
+    /* display: flex;
+    justify-content: space-between;
+    /* background-color: #f0f0f0; */
+    /* padding: 10px 0; */ 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 0 1em;
+}
+
+header a {
+    text-decoration: none;
+    color:azure;
+}
+
+header a:hover {
+    color:aquamarine;  
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+.navbar a {
+    display: block;
+    padding: 1em;
+    /* color: black;
+    font-weight: bold; */
+}
+
+.siteLogo h1 {
+    margin: 0;
+}
+
+/* ul {
+    list-style-type: none;
+} */
+
+li {
+    margin: 0 15px;
+}
+
+.theHeader {
+    background-color: rgb(2, 22, 44);
+    /* padding: 1em; */
+}
+
+.hero {
+    /* background-image: url(../assets/FlowFieldGenerativeArt.jpg); */
+    /* background-size: cover; */
+    /* Center the image */
+    /* background-position: center;  */
+    /* 
+    display: grid; */
+    
+    /* 
+    justify-content: center;
+    align-items: center;*/
+    text-align: center;  
+    
+    /* width: 100%;
+    height: 50vh; */
+    color: white;
+    /* 0em on width covers the rhs of the background */
+    padding: 10em 0em;
+}
+
+.hero2 {
+    background-color: rgb(0, 120, 127.5);
+    text-align: center;  
+    color: white;
+    /* 0em on width covers the rhs of the background */
+    padding: 10em 0em;
+}
+
+.hero h2, .hero2 h2 {
+    /* inline-block is used to make sure the "bounding box" is around the text instead of the whole width */
+    display: inline-block;
+    font-size: 6em;
+    line-height: 1.1;
+    margin: 0 auto;
+    text-transform: uppercase;
+    /* margin-bottom: 0.5em; */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    transition: 0.258s ease-in-out;
+    /* rgba(0, 255, 215, 0.525); */
+}
+
+.hero h2:hover, .hero2 h2:hover {
+    text-shadow: 2px 2px 4px rgba(0, 255, 215, 0.5);
+}
+
+.hero p, .hero2 p {
+    /* font-size: 1.5em; */
+    max-width: 36em;
+    margin: 1em auto;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.courses {
+    background-color: rgb(0, 120, 127.5);
+    padding: 2em 1em;
+    display: grid;
+    justify-content: center;
+    /* display: flex;
+    flex-direction: column; */
+    
+}
+
+.courses h3 {
+    text-align: center;
+    color:azure;
+}
+
+.courses ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    /* margin: 0; */
+    /* padding 0 helps center the link texts */
+    padding: 0;
+}
+
+.courses a {
+    display: block;
+    padding: 1em;
+    color: azure;
+    /* font-weight: bold; */
+}
+
+.courses a:hover {
+    color:aquamarine;  
+}
+
+.projects {
+    background-color: rgb(225, 255, 255);
+    padding: 2em 1em;
+    display: flex;
+    /* wrap enables the divs to match the layout of portrait and landscape resolutions */
+    flex-wrap: wrap;
+    justify-content: center;
+    /* comment align-items if you want every div to be at the same x position? */
+    /* align-items: center; */
+}
+
+.projects h3 {
+    text-align: center;
+    color: rgb(22, 22, 22);
+}
+
+/* .projects ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    /* margin: 0; */
+    /* padding 0 helps center the link texts */
+   /* padding: 0;
+} */
+
+.projects a {
+    display: block;
+    padding: 1em;
+    color: rgb(22, 22, 22);
+    /* font-weight: bold; */
+}
+
+.projects a:hover {
+    color:rgb(0, 160, 180);  
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 2em;
+}
+
+.project ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.project a {
+    /* margin: 0.5em 0; */
+    text-decoration: none;
+}
+
+footer {
+    background-color: rgb(22, 22, 22);
+    /* 1.1em so that it fully covers the bottom area of the background */
+    padding: 1.1em;
+}
+
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+
+.footerNav a {
+    /* display: block; */
+    display: flex;
+    align-items: center;
+    /* padding: 1em; */
+    /* color: black;
+    font-weight: bold; */
+}
+
+.footerNav a:hover {
+    transform: scale(1.1);
+}
