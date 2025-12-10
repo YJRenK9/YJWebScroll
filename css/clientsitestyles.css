@@ -29,6 +29,34 @@ html {
 }
 
 code {
-  color: orangered;
+  color: #27FF00;
   font-size: 18px;
+}
+
+.comment {
+  color: #80FF80;
+}
+
+.string {
+  color: #FF6200;
+}
+
+.dataType {
+  color: #00FFEA;
+}
+
+.mainFunction {
+  color: #FFFF83;
+}
+
+.function {
+  color: #ffff00;
+}
+
+.variable {
+  color: #FF0069;
+}
+
+.number {
+  color: #FF25DE;
 }/*# sourceMappingURL=clientsitestyles.css.map */

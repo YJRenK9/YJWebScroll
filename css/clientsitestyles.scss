@@ -1,5 +1,13 @@
 $backgroundColor: #000848;
 $textColor: #27FF00;
+$commentColor: #80FF80;
+$dataTypeColor: #00FFEA;
+$mainFunctionColor: #FFFF83;
+$functionColor: #ffff00;
+$stringColor: #FF6200;
+$numericColor: #FF25DE;
+$variableColor: #FF0069;
+
 $maxWidth: 1280px;
 
 html {
@@ -53,7 +61,35 @@ html {
 }
 
 code {
-    color: orangered;
+    color: $textColor;
     font-size: 18px;
     // text-align: left;
+}
+
+.comment {
+    color: $commentColor;
+}
+
+.string {
+    color: $stringColor;
+}
+
+.dataType {
+    color: $dataTypeColor;
+}
+
+.mainFunction {
+    color: $mainFunctionColor;
+}
+
+.function {
+    color: $functionColor;
+}
+
+.variable {
+    color: $variableColor;
+}
+
+.number {
+    color: $numericColor;
 }
