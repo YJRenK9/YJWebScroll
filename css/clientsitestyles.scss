@@ -97,8 +97,9 @@ code {
 .spam-container {
     position: relative;
     // padding-bottom: 40rem;
-    img {
+    img, svg {
         position: absolute;
+        width: 96px !important;
     }
 }
 
