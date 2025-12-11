@@ -59,4 +59,57 @@ code {
 
 .number {
   color: #FF25DE;
-}/*# sourceMappingURL=clientsitestyles.css.map */
+}
+
+.spam-container {
+  position: relative;
+}
+.spam-container img {
+  position: absolute;
+}
+
+.spam-message {
+  top: 0;
+  transform: translateX(-50%);
+}
+
+/*
+<br>
+        <div class="spam-container">
+            <img src="assets/spam_musubi_messages/spammusubimessagemeat1.png" alt="spam musubi" style="bottom:-36px;right:392px;">
+            <img src="assets/spam_musubi_messages/spammusubimessagemeat1.png" alt="spam musubi" style="top:-6px;right:402px">
+            <!-- spam musubi -->
+            <img src="assets/spam_musubi_messages/spammusubieggmessage1.png" alt="spam musubi" style="bottom:50px;left:151px">
+            <img src="assets/spam_musubi_messages/spammusubieggmessage1.png" alt="spam musubi" style="bottom:5px;left:180px;width:176px;">
+            <img src="assets/spam_musubi_messages/spammusubimessagemeat1.png" alt="spam musubi" style="bottom:35px;left:226px;">
+            <img src="assets/spam_musubi_messages/spammusubimessagegray1.png" alt="spam musubi" style="top:72px;left:150px;">
+            <img src="assets/spam_musubi_messages/spammusubimessagemeat1.png" alt="spam musubi" style="bottom:75px;left:226px;">
+            <img src="assets/spam_musubi_messages/spammusubieggmessage1.png" alt="spam musubi" style="bottom:8px;right:188px;width:176px;">
+            <img src="assets/spam_musubi_messages/spammusubieggmessage2.png" alt="spam musubi" style="bottom:-30px;right:182px;width:153px;">
+            <img src="assets/spam_musubi_messages/spammusubieggmessage2.png" alt="spam musubi" style="bottom:-120px;right:168px;width:153px;">
+            <img src="assets/spam_musubi_messages/spammusubieggmessage2.png" alt="spam musubi" style="bottom:18px;left:148px;width:153px;">
+            <!-- spam onigiri -->
+            <img src="assets/spam_musubi_messages/spammusubimessagegray2.png" alt="spam musubi" style="top:30px;left:153px;width:208px;">
+            <img src="assets/spam_musubi_messages/spammusubimessagegray2.png" alt="spam musubi" style="top:140px;left:196px;width:208px;">
+            <img src="assets/spam_musubi_messages/spammusubimessagegray2.png" alt="spam musubi" style="top:140px;left:896px;width:208px;">
+            <img src="assets/spam_musubi_messages/spammusubimessagegray2.png" alt="spam musubi" style="top:166px;left:872px;width:208px;">
+            <!-- spam musubi -->
+            <img src="assets/spam_musubi_messages/spammusubimessagegray1.png" alt="spam musubi" style="top:92px;right:176px;">
+            <img src="assets/spam_musubi_messages/spammusubimessagegray1.png" alt="spam musubi" style="top:242px;right:232px;">
+            <img src="assets/spam_musubi_messages/spammusubimessagegray1.png" alt="spam musubi" style="top:110px;left:150px;">
+            <!-- musubi so ono (yellow) -->
+            <img src="assets/spam_musubi_messages/spammusubieggmessage3.png" alt="spam musubi" style="top:0px;left:815px;width:283px;">
+            <img src="assets/spam_musubi_messages/spammusubieggmessage3.png" alt="spam musubi" style="top:-14px;left:135px;width:216px;">
+            <!-- popup 4 -->
+            <img src="assets/spam_musubi_messages/spammusubipopup4c.png" alt="spam musubi" style="top:48px;left:420px;width:307px;">
+            <img src="assets/spam_musubi_messages/spammusubieggmessage3.png" alt="spam musubi" style="top:106px;right:316px;width:300px;">
+            <!-- spam musubi red -->
+             <img src="assets/spam_musubi_messages/spammusubimessagemeat1.png" alt="spam musubi" style="top:-30px;right:244px;width:224px;">
+             <img src="assets/spam_musubi_messages/spammusubimessagemeat1.png" alt="spam musubi" style="bottom:36px;right:214px;width:224px;">
+             <img src="assets/spam_musubi_messages/spammusubimessagemeat1.png" alt="spam musubi" style="bottom:36px;right:158px;width:224px;">
+             <img src="assets/spam_musubi_messages/spammusubimessagemeat1.png" alt="spam musubi" style="bottom:120px;right:190px;width:224px;">
+             <img src="assets/spam_musubi_messages/spammusubimessagemeat3.png" alt="spam musubi" style="bottom:160px;left:275px;width:291px;">
+             <img src="assets/spam_musubi_messages/spammusubipopup3c.png" alt="spam musubi" style="top:-102px;left:310px;width:424px;">
+        </div>
+        <div style="padding-top: 40rem;"></div>
+*//*# sourceMappingURL=clientsitestyles.css.map */

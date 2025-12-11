@@ -15,69 +15,93 @@ const menuButton = document.querySelector('.menu-button');
 //     }
 // });
 
-menuButton.addEventListener('click', () => {
-    const currentState = siteNav.getAttribute('data-menustate');
+// menuButton.addEventListener('click', () => {
+//     const currentState = siteNav.getAttribute('data-menustate');
 
-    if (siteNav.getAttribute('data-menustate') === 'open') {
-        siteNav.setAttribute('data-menustate', 'closed');
-    } else {
-        // creates a "data-menustate" attribute
-        console.log(siteNav.getAttribute('data-menustate'));
-        // if (siteNav.getAttribute('data-menustate') === null) {
-        //     moveDown();
-        //     setTimeout(() => {
-        //         siteNav.setAttribute('data-menustate', 'open');
-        //     }, 0.333);
+//     if (siteNav.getAttribute('data-menustate') === 'open') {
+//         siteNav.setAttribute('data-menustate', 'closed');
+//     } else {
+//         // creates a "data-menustate" attribute
+//         console.log(siteNav.getAttribute('data-menustate'));
+//         // if (siteNav.getAttribute('data-menustate') === null) {
+//         //     moveDown();
+//         //     setTimeout(() => {
+//         //         siteNav.setAttribute('data-menustate', 'open');
+//         //     }, 0.333);
             
-        // } 
-            siteNav.setAttribute('data-menustate', 'open');
+//         // } 
+//             siteNav.setAttribute('data-menustate', 'open');
         
         
-        //siteNav.style.transition = "translate 0.667s ease-in-out";
-    }
+//         //siteNav.style.transition = "translate 0.667s ease-in-out";
+//     }
 
-    console.log("Ay you got any ramen yo!");
-    console.log(siteNav.getAttribute('data-menustate'));
-});
+//     console.log("Ay you got any ramen yo!");
+//     console.log(siteNav.getAttribute('data-menustate'));
+// });
 
-function moveDown() {
-    const mobileNav = document.querySelector('.site-nav ul');
-    var pos = -125;
-    var id = setInterval(frame, 0.667);
-    function frame() {
-        if (pos === 0) {
-            clearInterval(id);
-        } else {
-            pos++;
-            mobileNav.style.translate = "0 " + pos + "%";
-        }
-    }
+// function moveDown() {
+//     const mobileNav = document.querySelector('.site-nav ul');
+//     var pos = -125;
+//     var id = setInterval(frame, 0.667);
+//     function frame() {
+//         if (pos === 0) {
+//             clearInterval(id);
+//         } else {
+//             pos++;
+//             mobileNav.style.translate = "0 " + pos + "%";
+//         }
+//     }
 
-}
+// }
 
-// remove the data attribute on resize to fix drawer nav animation 
-window.onresize = () => {
-    // console.log("window resized!");
-    // removes the "data-menustate" attribute
-    siteNav.removeAttribute("data-menustate");
+// // remove the data attribute on resize to fix drawer nav animation 
+// window.onresize = () => {
+//     // console.log("window resized!");
+//     // removes the "data-menustate" attribute
+//     siteNav.removeAttribute("data-menustate");
+// };
+
+// // Scroll-triggered Animation
+// // change active state for all target elements with intersection observer
+// const myObserver = new IntersectionObserver(entries => {
+//   entries.forEach(entry => {
+//     if (entry.isIntersecting) {
+//       // element is within the webpage (onscreen)
+//       entry.target.setAttribute("data-viewstate", "active");
+//     } else {
+//       // element is offscreen
+//       entry.target.setAttribute("data-viewstate", "inactive");
+//     }
+//   });
+// });
+
+// const mytargets = document.querySelectorAll('.observe-me');
+// mytargets.forEach(el => {
+//   // observes the element that has the 'observe-me' class
+//   myObserver.observe(el); 
+// });
+
+window.onload = () => {
+  
 };
+gsap.registerPlugin(ScrollTrigger);
 
-// Scroll-triggered Animation
-// change active state for all target elements with intersection observer
-const myObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      // element is within the webpage (onscreen)
-      entry.target.setAttribute("data-viewstate", "active");
-    } else {
-      // element is offscreen
-      entry.target.setAttribute("data-viewstate", "inactive");
+document.querySelectorAll(".container").forEach((section) => {
+  gsap.fromTo(section,
+    { opacity: 0, scale: 0.8 },
+    { 
+      opacity: 1, 
+      scale: 1, 
+      duration: 1, 
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: section,
+        start: "top 80%",   // when section enters viewport
+        end: "bottom 20%",  // when section leaves viewport
+        toggleActions: "play reverse play reverse", 
+        // markers: true // Uncomment to see markers for debugging
+      }
     }
-  });
-});
-
-const mytargets = document.querySelectorAll('.observe-me');
-mytargets.forEach(el => {
-  // observes the element that has the 'observe-me' class
-  myObserver.observe(el); 
+  );
 });
