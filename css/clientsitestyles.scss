@@ -24,22 +24,50 @@ html {
     // top: 50%;
     padding: 10% 0%;
     margin-inline: auto;
+    // margin: 180px 0;
     // padding-inline: 500px;
     max-width: $maxWidth;
+
+    @media (max-width: 768px) {
+        // padding: 20% 0%;
+        & {
+          margin: 20rem 0;  
+          pre:has(code) {
+                color: $textColor;
+                text-align: left;
+                font-size: 11px !important;
+                white-space: pre-wrap;
+            }
+        }
+
+        // pre:has(code) {
+        //     font-size: 11px;
+        // }
+    }
 
     h1 {
         font-family: "source-code-variable", sans-serif;
     }
 
-    // img {
-    //     width: 270px;
-    // }
+    img {
+        // make the image responsive on mobile devices
+        max-width: 100%;
+        height: auto;
+    }
 
     // the pog juice is too big in the third container, so make the image smaller
     &:nth-of-type(3) {
         img {
             width: 270px;
         }
+    }
+
+    &:nth-of-type(5) {
+        img {
+            // width: 300px;
+            // margin-top: 64rem;
+        }
+        
     }
 
     p {
@@ -50,21 +78,25 @@ html {
     p:nth-of-type(1) {
         padding-bottom: 1em;
     }
-    code {
+    pre:has(code) {
         // enables justify-content
-        display: flex;
+        // display: flex;
         // makes the code center on the webpage
-        justify-content: center;
+        // justify-content: center;
         // aligns the text to the left
         text-align: left;
+        // assign the text color and font size
+        color: $textColor;
+        font-size: 18px;
+        white-space: pre-wrap;
     }
 }
 
-code {
-    color: $textColor;
-    font-size: 18px;
-    // text-align: left;
-}
+// code {
+//     color: $textColor;
+//     font-size: 18px;
+//     // text-align: left;
+// }
 
 .comment {
     color: $commentColor;

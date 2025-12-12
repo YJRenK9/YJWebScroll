@@ -2,6 +2,8 @@
 //     // Your code here will run after the DOM is fully loaded
 //     console.log("Document is ready!");
 
+// const { marker } = require("leaflet");
+
 //     // global functions go here
 //     this.style.backgroundColor = "aqua";
 // });
@@ -87,21 +89,46 @@ window.onload = () => {
 };
 gsap.registerPlugin(ScrollTrigger);
 
-document.querySelectorAll(".container").forEach((section) => {
-  gsap.fromTo(section,
-    { opacity: 0, scale: 0.8 },
-    { 
-      opacity: 1, 
-      scale: 1, 
-      duration: 1, 
-      ease: "power2.out",
-      scrollTrigger: {
+// Set initial state once
+gsap.set(".container", { opacity: 0, scale: 0.8 });
+
+ScrollTrigger.matchMedia({
+
+  // Desktop (min-width: 768px)
+  "(min-width: 768px)": function() {
+    document.querySelectorAll(".container").forEach((section) => {
+      ScrollTrigger.create({
         trigger: section,
-        start: "top 80%",   // when section enters viewport
-        end: "bottom 20%",  // when section leaves viewport
-        toggleActions: "play reverse play reverse", 
-        // markers: true // Uncomment to see markers for debugging
-      }
-    }
-  );
+        start: "top 50%",   // desktop start
+        end: "bottom 20%",
+        markers: true,
+        onEnter: () => gsap.to(section, { opacity: 1, scale: 1, duration: 0.6 }),
+        onLeave: () => gsap.to(section, { opacity: 0, scale: 0.8, duration: 0.4 }),
+        onEnterBack: () => gsap.to(section, { opacity: 1, scale: 1, duration: 0.6 }),
+        onLeaveBack: () => gsap.to(section, { opacity: 0, scale: 0.8, duration: 0.4 })
+      });
+    });
+  },
+
+  // Mobile (max-width: 767px)
+  "(max-width: 767px)": function() {
+    document.querySelectorAll(".container").forEach((section) => {
+      ScrollTrigger.create({
+        trigger: section,
+        start: "top 95%",   // mobile start
+        end: "bottom top",  // mobile end
+        markers: true,
+        onEnter: () => gsap.to(section, { opacity: 1, scale: 1, duration: 0.6 }),
+        onLeave: () => gsap.to(section, { opacity: 0, scale: 0.8, duration: 0.4 }),
+        onEnterBack: () => gsap.to(section, { opacity: 1, scale: 1, duration: 0.6 }),
+        onLeaveBack: () => gsap.to(section, { opacity: 0, scale: 0.8, duration: 0.4 })
+      });
+    });
+  }
+
 });
+// refresh once after setup
+ScrollTrigger.refresh();
+
+// refresh again on resize
+window.addEventListener("resize", () => ScrollTrigger.refresh());

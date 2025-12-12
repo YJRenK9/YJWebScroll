@@ -9,8 +9,23 @@ html {
   margin-inline: auto;
   max-width: 1280px;
 }
+@media (max-width: 768px) {
+  .container {
+    margin: 20rem 0;
+  }
+  .container pre:has(code) {
+    color: #27FF00;
+    text-align: left;
+    font-size: 11px !important;
+    white-space: pre-wrap;
+  }
+}
 .container h1 {
   font-family: "source-code-variable", sans-serif;
+}
+.container img {
+  max-width: 100%;
+  height: auto;
 }
 .container:nth-of-type(3) img {
   width: 270px;
@@ -22,15 +37,11 @@ html {
 .container p:nth-of-type(1) {
   padding-bottom: 1em;
 }
-.container code {
-  display: flex;
-  justify-content: center;
+.container pre:has(code) {
   text-align: left;
-}
-
-code {
   color: #27FF00;
   font-size: 18px;
+  white-space: pre-wrap;
 }
 
 .comment {
