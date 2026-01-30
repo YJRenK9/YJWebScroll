@@ -101,7 +101,7 @@ ScrollTrigger.matchMedia({
         trigger: section,
         start: "top 50%",   // desktop start
         end: "bottom 20%",
-        markers: true,
+        markers: false, // used for debugging purposes
         onEnter: () => gsap.to(section, { opacity: 1, scale: 1, duration: 0.6 }),
         onLeave: () => gsap.to(section, { opacity: 0, scale: 0.8, duration: 0.4 }),
         onEnterBack: () => gsap.to(section, { opacity: 1, scale: 1, duration: 0.6 }),
@@ -117,7 +117,7 @@ ScrollTrigger.matchMedia({
         trigger: section,
         start: "top 95%",   // mobile start
         end: "bottom top",  // mobile end
-        markers: true,
+        markers: false, 
         onEnter: () => gsap.to(section, { opacity: 1, scale: 1, duration: 0.6 }),
         onLeave: () => gsap.to(section, { opacity: 0, scale: 0.8, duration: 0.4 }),
         onEnterBack: () => gsap.to(section, { opacity: 1, scale: 1, duration: 0.6 }),
